@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider=""/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -686,8 +687,12 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="200" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="480" height="270"/>
+                        <value key="maxSize" type="size" width="480" height="270"/>
+                        <value key="minFullScreenContentSize" type="size" width="480" height="270"/>
+                        <value key="maxFullScreenContentSize" type="size" width="480" height="270"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -703,11 +708,86 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Iv4-oB-aZc">
+                                <rect key="frame" x="-2" y="122" width="194" height="56"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Music" id="YBQ-2s-NJ9">
+                                    <font key="font" metaFont="system" size="48"/>
+                                    <color key="textColor" name="windowFrameTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kZl-p4-7Xm">
+                                <rect key="frame" x="288" y="122" width="194" height="56"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Music" id="cuB-xz-j6L">
+                                    <font key="font" metaFont="system" size="48"/>
+                                    <color key="textColor" name="windowFrameTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a0z-Te-La7">
+                                <rect key="frame" x="-2" y="20" width="484" height="15"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="使用空格键计算 BPM，间隔 3 秒将重新计算" id="Epv-US-rdK">
+                                    <font key="font" metaFont="system" size="12"/>
+                                    <color key="textColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vBH-Si-W51">
+                                <rect key="frame" x="208" y="122" width="64" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="ZyO-RJ-kqe"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="｜" id="nVm-n9-NJD">
+                                    <font key="font" size="48" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" name="windowFrameTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wYF-sn-4t9">
+                                <rect key="frame" x="70" y="194" width="50" height="23"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="BPM" id="czR-S3-QLe">
+                                    <font key="font" metaFont="system" size="20"/>
+                                    <color key="textColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="M6Y-wF-CXZ">
+                                <rect key="frame" x="334" y="194" width="102" height="23"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="准确率(%)" id="OUN-O1-bjv">
+                                    <font key="font" size="20" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="a0z-Te-La7" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="Dzh-rs-TTb"/>
+                            <constraint firstItem="kZl-p4-7Xm" firstAttribute="leading" secondItem="vBH-Si-W51" secondAttribute="trailing" constant="20" id="Gvx-Mp-fHh"/>
+                            <constraint firstItem="vBH-Si-W51" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="VRl-kT-Tig"/>
+                            <constraint firstAttribute="bottom" secondItem="a0z-Te-La7" secondAttribute="bottom" constant="20" id="aYX-lY-eZZ"/>
+                            <constraint firstItem="M6Y-wF-CXZ" firstAttribute="centerX" secondItem="kZl-p4-7Xm" secondAttribute="centerX" id="bFS-1K-ONj"/>
+                            <constraint firstItem="vBH-Si-W51" firstAttribute="leading" secondItem="Iv4-oB-aZc" secondAttribute="trailing" constant="20" id="jL4-ky-uE0"/>
+                            <constraint firstAttribute="trailing" secondItem="kZl-p4-7Xm" secondAttribute="trailing" id="kFW-R4-xXr"/>
+                            <constraint firstItem="kZl-p4-7Xm" firstAttribute="centerY" secondItem="Iv4-oB-aZc" secondAttribute="centerY" id="lS1-G3-lV1"/>
+                            <constraint firstItem="M6Y-wF-CXZ" firstAttribute="centerY" secondItem="wYF-sn-4t9" secondAttribute="centerY" id="lZI-pX-Ux2"/>
+                            <constraint firstItem="wYF-sn-4t9" firstAttribute="centerX" secondItem="Iv4-oB-aZc" secondAttribute="centerX" id="pII-hv-yj9"/>
+                            <constraint firstAttribute="trailing" secondItem="a0z-Te-La7" secondAttribute="trailing" id="qEe-2l-UfY"/>
+                            <constraint firstItem="Iv4-oB-aZc" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="rPU-B8-hOu"/>
+                            <constraint firstItem="a0z-Te-La7" firstAttribute="leading" secondItem="Iv4-oB-aZc" secondAttribute="leading" id="rzy-4x-kDR"/>
+                            <constraint firstItem="Iv4-oB-aZc" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="sxA-10-EaO"/>
+                            <constraint firstItem="vBH-Si-W51" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="tfz-Ux-sKs"/>
+                            <constraint firstItem="Iv4-oB-aZc" firstAttribute="top" secondItem="wYF-sn-4t9" secondAttribute="bottom" constant="16" id="vNZ-dC-roa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="accuracyRateLabel" destination="kZl-p4-7Xm" id="5Kg-Az-t3W"/>
+                        <outlet property="bpmLabel" destination="Iv4-oB-aZc" id="zzZ-uE-zrN"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

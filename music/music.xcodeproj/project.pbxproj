@@ -14,6 +14,7 @@
 		8442A81823729EC30087214B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442A81723729EC30087214B /* main.m */; };
 		8442A82323729EC40087214B /* musicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442A82223729EC40087214B /* musicTests.m */; };
 		8442A82E23729EC40087214B /* musicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442A82D23729EC40087214B /* musicUITests.m */; };
+		8442A87A2372BFBC0087214B /* CZMusicBPMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442A8792372BFBC0087214B /* CZMusicBPMTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		8442A82923729EC40087214B /* musicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = musicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8442A82D23729EC40087214B /* musicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = musicUITests.m; sourceTree = "<group>"; };
 		8442A82F23729EC40087214B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8442A8782372BFBC0087214B /* CZMusicBPMTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZMusicBPMTool.h; sourceTree = "<group>"; };
+		8442A8792372BFBC0087214B /* CZMusicBPMTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZMusicBPMTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,7 @@
 		8442A80A23729EB70087214B /* music */ = {
 			isa = PBXGroup;
 			children = (
+				8442A8772372BDAF0087214B /* Tools */,
 				8442A80B23729EB70087214B /* AppDelegate.h */,
 				8442A80C23729EB70087214B /* AppDelegate.m */,
 				8442A80E23729EB70087214B /* ViewController.h */,
@@ -129,6 +133,15 @@
 				8442A82F23729EC40087214B /* Info.plist */,
 			);
 			path = musicUITests;
+			sourceTree = "<group>";
+		};
+		8442A8772372BDAF0087214B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				8442A8782372BFBC0087214B /* CZMusicBPMTool.h */,
+				8442A8792372BFBC0087214B /* CZMusicBPMTool.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +275,7 @@
 			files = (
 				8442A81023729EB70087214B /* ViewController.m in Sources */,
 				8442A81823729EC30087214B /* main.m in Sources */,
+				8442A87A2372BFBC0087214B /* CZMusicBPMTool.m in Sources */,
 				8442A80D23729EB70087214B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
